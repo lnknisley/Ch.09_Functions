@@ -1,7 +1,8 @@
-# 9.0 Jedi Training (45pts)  Name:________________
+# 9.0 Jedi Training (65pts)  Name:________________
 
 
-#1.) Correct the following code: (The user's number should be increased by 1 and printed.) (2pts)
+#1.) Correct the following code and list corrections. (2pts)
+# (The user's number should be increased by 1 and printed.)
 
 def increase(x):
     return x + 1
@@ -9,6 +10,9 @@ def increase(x):
 num = input("Enter a number: ")
 increase(x)
 print("Your number has been increased to", x)
+
+#1
+#2
                         
  
 
@@ -21,9 +25,11 @@ def count_to_ten:
  
 count_to_ten()
 
+#1
+#2
 
 
-#3.) Correct the following code to sum the list:  (2pts)
+#3.) Correct the following code to sum the list:  (3pts)
 
 def sum_list(list):
     for i in list:
@@ -33,10 +39,11 @@ def sum_list(list):
 list = [45, 2, 10, -5, 100]
 print(sum_list(list))
 
+#1
+#2
 
 
-
-#4.) Correct the following code which should reverse the sentence that is entered.  (2pts)
+#4.) Correct the following code which should reverse the sentence that is entered.  (3pts)
 
 def reverse(text):
     result = ""
@@ -48,30 +55,13 @@ def reverse(text):
 text = input("Enter a sentence: ")
 print(reverse(text))
 
+#1
+#2
 
 
-#5.) Correct the following code: (if one of the options is not entered it should print the statements)  (2pts)
-
-def get_user_choice():
-    while True:
-        command = input("Command: ")
-        if command = f or command = m or command = s or command = d or command = q:
-            return command
- 
-        print("Hey, that's not a command. Here are your options:" )
-        print("f - Full speed ahead")
-        print("m - Moderate speed")
-        print("s - Status")
-        print("d - Drink")
-        print("q - Quit")
- 
-user_command = get_user_choice()
-print("You entered:", user_command)
-
-
-
+##############################################################################
 '''
-#6.) MINI FUNCTION (5pts)
+#5.) MINI FUNCTION (5pts)
 -------------------------------
 Write a function called mini that will take three numbers as parameters 
 and return the smallest value. If more than one number is tied for smallest, 
@@ -98,11 +88,13 @@ The function should return the value, not print the value.
 Also, while there is a min function built into Python, don't use it. 
 Please use if statements and practice creating it yourself.
 '''
+##############################################################################
 
 
 
+##############################################################################
 '''
-7.) BOX_FUNCTION (5pts)
+6.) BOX_FUNCTION (5pts)
 -------------------------------
 Write a function called box that will output boxes (made of lower case o's) 
 given a height and width. Once you've finished writing your function, copy 
@@ -134,11 +126,14 @@ oooooooooo
 oooooooooo
 oooooooooo
 '''
+##############################################################################
 
 
 
+
+##############################################################################
 '''
-8.) FIND FUNCTION (5pts)
+7.) FIND FUNCTION (5pts)
 -------------------------------
 Write a function called FIND that will take a list of numbers, "list", 
 along with one other number, "key". Have it search the list for the value
@@ -170,9 +165,15 @@ Use a for loop with an index variable and a range.
 Inside the loop use an if statement. This function 
 can be written in about four lines of code.
 '''
+##############################################################################
 
+
+
+
+
+##############################################################################
 '''
-9.) FIZZBUZZ (5pts)
+8.) FIZZBUZZ (5pts)
 -------------------------------
 The "Fizz-Buzz test" is an interview question designed to help filter out the 99.5% 
 of programming job candidates who can't seem to program their way out of a wet paper bag.
@@ -207,11 +208,17 @@ fizzbuzz
 
 The classic test is to use the numbers 1-100 so make sure you test that with your function.
 '''
+##############################################################################
 
 
 
+
+
+
+
+##############################################################################
 '''
-10.) FIBONACCI (5pts)
+9.) FIBONACCI (5pts)
 -------------------------------
 In mathematics, the Fibonacci numbers are the numbers in the following integer sequence, 
 called the Fibonacci sequence, and characterized by the fact that every number after the
@@ -222,12 +229,19 @@ in the Fibonacci sequence. Pass the number into the function.
 Just to do a quick review of text formatting in the last chapter, make the list of numbers
 right-justified with commas.
 '''
+##############################################################################
 
 
 
 
+
+
+
+
+
+##############################################################################
 '''
-11.) 10,000 NUMBERS (5pts)
+10.) 10,000 NUMBERS (20pts)
 -------------------------------
 
 In this program we will write three different functions.
@@ -247,10 +261,13 @@ OUTPUT
 ------
 [2,5,1,6,3] #something like this 
 '''
+##############################################################################
 
 
 
 
+
+##############################################################################
 '''
 Function #2: Write a function called count_list that takes
 in a list and a number. Have the function return the number
@@ -268,9 +285,12 @@ OUTPUT
 ------
 3 
 '''
+##############################################################################
 
 
 
+
+##############################################################################
 '''
 Function #3: Write a function called average_list that returns the 
 average of the list passed into it. Once you've finished writing your
@@ -287,24 +307,34 @@ OUTPUT
 ------
 2.0
 '''
+##############################################################################
 
 
 
 
+
+##############################################################################
 '''
 Now that the functions have been created, use them all in a main program that will:
 1.) Create a list of 10,000 random numbers from 1 to 6. (1 line of code)
 2.) Print the count of 1 through 6. (For example, "There are 1361 amount of 2s") (3 lines of code)
 3.) Print the average of all 10,000 random numbers. (Make sure it's a float) (2 lines of code)
 '''
+##############################################################################
 
 
 
 
 
 
+
+
+
+
+
+##############################################################################
 '''
-12.) BB8 DRAWING PROGRAM (5pts)
+11.) BB8 DRAWING PROGRAM (10pts)
 -------------------------------
 Back to the drawing board! Get it? Let's say we want to draw many BB8 robots
 of varying sizes at various locations. We can make a function called draw_BB8().
