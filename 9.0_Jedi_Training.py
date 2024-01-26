@@ -1,4 +1,4 @@
-# 9.0 Jedi Training (65pts)  Name:________________
+# 9.0 Jedi Training (45pts)  Name:________________
 
 
 #1.) Correct the following code and list corrections. (2pts)
@@ -29,7 +29,7 @@ count_to_ten()
 #2
 
 
-#3.) Correct the following code to sum the list:  (3pts)
+#3.) Correct the following code to sum the list:  (2pts)
 
 def sum_list(list):
     for i in list:
@@ -43,7 +43,7 @@ print(sum_list(list))
 #2
 
 
-#4.) Correct the following code which should reverse the sentence that is entered.  (3pts)
+#4.) Correct the following code which should reverse the sentence that is entered.  (2pts)
 
 def reverse(text):
     result = ""
@@ -61,7 +61,7 @@ print(reverse(text))
 
 ##############################################################################
 '''
-#5.) MINI FUNCTION (5pts)
+#5.) MINI FUNCTION (2pts)
 -------------------------------
 Write a function called mini that will take three numbers as parameters 
 and return the smallest value. If more than one number is tied for smallest, 
@@ -94,7 +94,7 @@ Please use if statements and practice creating it yourself.
 
 ##############################################################################
 '''
-6.) BOX_FUNCTION (5pts)
+6.) BOX_FUNCTION (2pts)
 -------------------------------
 Write a function called box that will output boxes (made of lower case o's) 
 given a height and width. Once you've finished writing your function, copy 
@@ -133,7 +133,7 @@ oooooooooo
 
 ##############################################################################
 '''
-7.) FIND FUNCTION (5pts)
+7.) FIND FUNCTION (2pts)
 -------------------------------
 Write a function called FIND that will take a list of numbers, "list", 
 along with one other number, "key". Have it search the list for the value
@@ -173,40 +173,15 @@ can be written in about four lines of code.
 
 ##############################################################################
 '''
-8.) FIZZBUZZ (5pts)
+8.) FIZZBUZZ (3pts)
 -------------------------------
 The "Fizz-Buzz test" is an interview question designed to help filter out the 99.5% 
 of programming job candidates who can't seem to program their way out of a wet paper bag.
 Write a function called fizzbuzz that prints the numbers from 1 to "endpoint", where 
 endpoint is your final number. But for multiples of three print "Fizz" instead of the
 number and for the multiples of five print "Buzz". For numbers which are multiples of
-both three and five print "FizzBuzz". Once you've finished writing your function, 
-copy and paste the following code after it and make sure it works with the function you wrote:
-
-INPUT
------
-fizzbuzz(15)
-
-OUTPUT
-------
-1
-2
-fizz
-4
-buzz
-fizz
-7
-8
-fizz
-buzz
-11
-fizz
-13
-14
-fizzbuzz
-
-
-The classic test is to use the numbers 1-100 so make sure you test that with your function.
+both three and five print "FizzBuzz". The classic test is to use the numbers 1-100 so make
+sure you test that with your function.
 '''
 ##############################################################################
 
@@ -218,16 +193,13 @@ The classic test is to use the numbers 1-100 so make sure you test that with you
 
 ##############################################################################
 '''
-9.) FIBONACCI (5pts)
+9.) FIBONACCI (3pts)
 -------------------------------
 In mathematics, the Fibonacci numbers are the numbers in the following integer sequence, 
 called the Fibonacci sequence, and characterized by the fact that every number after the
 first two is the sum of the two preceding ones:1,1,2,3,5,8,13,21,34,55,89,144
 Write a function called fibonacci() that will print up to a maximum of the first 100 numbers
 in the Fibonacci sequence. Pass the number into the function.
-
-Just to do a quick review of text formatting in the last chapter, make the list of numbers
-right-justified with commas.
 '''
 ##############################################################################
 
@@ -241,7 +213,7 @@ right-justified with commas.
 
 ##############################################################################
 '''
-10.) 10,000 NUMBERS (20pts)
+10.) 10,000 NUMBERS (15pts)
 -------------------------------
 
 In this program we will write three different functions.
@@ -263,14 +235,10 @@ OUTPUT
 '''
 ##############################################################################
 
-
-
-
-
 ##############################################################################
 '''
 Function #2: Write a function called count_list that takes
-in a list and a number. Have the function return the number
+in your previous list and a number. Have the function return the amount
 of times the specified number appears in the list. Once you've
 finished writing your function, copy and paste the following code
 after it and make sure it works with the function you wrote:
@@ -287,13 +255,10 @@ OUTPUT
 '''
 ##############################################################################
 
-
-
-
 ##############################################################################
 '''
 Function #3: Write a function called average_list that returns the 
-average of the list passed into it. Once you've finished writing your
+average of your previous list passed into it. Once you've finished writing your
 function, copy and paste the following code after it and make sure it
 works with the function you wrote:
 
@@ -308,10 +273,6 @@ OUTPUT
 2.0
 '''
 ##############################################################################
-
-
-
-
 
 ##############################################################################
 '''
