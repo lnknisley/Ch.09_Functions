@@ -5,58 +5,59 @@
 # (The user's number should be increased by 1 and printed.)
 
 def increase(x):
-    return x + 1
+    result = int(x) + 1
+    return result
  
 num = input("Enter a number: ")
-increase(x)
-print("Your number has been increased to", x)
+print("Your number has been increased to", increase(num))
 
-#1
-#2
+#1: x is the template parameter, it is not actually defined and another real variable should be used. num should be the function input.
+#2: because x is the template parameter another real variable is needed instead. In my instance, I moved the increase function to the inside of the print function.
                         
  
 
 
 #2.) Correct the following code to print 1-10:  (2pts)
 
-def count_to_ten:
-    for i in range[10]:
+def count_to_ten():
+    for i in range(10):
         print(i)
  
 count_to_ten()
 
-#1
-#2
+#1: every function has to have parenthesis even if they are empty. functions are called by including the parenthesis [Ex: fun()]
+#2: the range function is a function which requires a parenthesis to input the parameters, in this case the range of numbers
 
 
 #3.) Correct the following code to sum the list:  (2pts)
 
-def sum_list(list):
-    for i in list:
-        sum = i
-        return sum
+def sum_list(nums):
+    list_sum = 0
+    for i in nums:
+        list_sum += i
+        return list_sum
  
-list = [45, 2, 10, -5, 100]
-print(sum_list(list))
+lists = [45, 2, 10, -5, 100]
+print(sum_list(lists))
 
-#1
-#2
-
+#1: the sum needs to be defined outside the for loop for the number to be added. I defined it as 0.
+#2 i must be added to the sum, unlike
+#Extra: Naming collisions exist with the given variable names. As such I changed them all to unused variables.
 
 #4.) Correct the following code which should reverse the sentence that is entered.  (2pts)
 
-def reverse(text):
+def reverse(string):
     result = ""
-    text_length = len(text)
+    text_length = len(string)
     for i in range(text_length):
-        result = result + text[i * -1]
+        result += string[-i - 1]
     return result
- 
+
 text = input("Enter a sentence: ")
 print(reverse(text))
 
-#1
-#2
+#1: the function needs a different variable than one from the outer scope. I adjusted it to string
+#2: In order to reverse the list you need to not only make i negative to go backwards through the string, but you also need to minus it by one because lists start at 0 and -0 == 0.
 
 
 ##############################################################################
@@ -89,9 +90,13 @@ Also, while there is a min function built into Python, don't use it.
 Please use if statements and practice creating it yourself.
 '''
 ##############################################################################
-
-
-
+def mini(x, y, z):
+    lowest = x
+    items = [y, z]
+    for i in items:
+        if i <= lowest:
+            lowest = i
+    return lowest
 ##############################################################################
 '''
 6.) BOX_FUNCTION (2pts)
@@ -127,10 +132,12 @@ oooooooooo
 oooooooooo
 '''
 ##############################################################################
-
-
-
-
+def box(height, length):
+    string = ""
+    for i in range(length):
+        string += "o"
+    for i in range(height):
+        print(string)
 ##############################################################################
 '''
 7.) FIND FUNCTION (2pts)
@@ -166,11 +173,10 @@ Inside the loop use an if statement. This function
 can be written in about four lines of code.
 '''
 ##############################################################################
-
-
-
-
-
+def find(array, key):
+    for i in range(len(array)):
+        if key == array[i]:
+            print(f"Found {key} at position {i}")
 ##############################################################################
 '''
 8.) FIZZBUZZ (3pts)
@@ -184,13 +190,16 @@ both three and five print "FizzBuzz". The classic test is to use the numbers 1-1
 sure you test that with your function.
 '''
 ##############################################################################
-
-
-
-
-
-
-
+def fizzbuzz(limit):
+    for i in range(1, limit + 1): #Done to actually include limit
+        if i % 3 == 0 and i % 5 != 0:
+            print("Fizz")
+        elif i % 5 == 0 and i % 3 != 0:
+            print("Buzz")
+        elif i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz")
+        else:
+            print(i)
 ##############################################################################
 '''
 9.) FIBONACCI (3pts)
@@ -202,15 +211,22 @@ Write a function called fibonacci() that will print up to a maximum of the first
 in the Fibonacci sequence. Pass the number into the function.
 '''
 ##############################################################################
-
-
-
-
-
-
-
-
-
+def fibonaci(limit):
+    if limit > 100:
+        limit = 100
+    a = 1
+    b = 0
+    result = 0
+    for i in range(1, limit + 1):
+        if i == 1:
+            print(1)
+        else:
+            result = a + b
+            print(result)
+            if i % 2 == 0:
+                b = result
+            else:
+                a = result
 ##############################################################################
 '''
 10.) 10,000 NUMBERS (15pts)
@@ -234,7 +250,14 @@ OUTPUT
 [2,5,1,6,3] #something like this 
 '''
 ##############################################################################
+import random
 
+def create_list(buffer):
+    randlist = []
+    for i in range(buffer):
+        r = random.randint(1, 6)
+        randlist.append(r)
+    return randlist
 ##############################################################################
 '''
 Function #2: Write a function called count_list that takes
@@ -254,7 +277,14 @@ OUTPUT
 3 
 '''
 ##############################################################################
-
+def count_list(array, num):
+    tally = 0
+    for value in array:
+        if value == num:
+            tally += 1
+        else:
+            continue
+    return tally
 ##############################################################################
 '''
 Function #3: Write a function called average_list that returns the 
@@ -273,7 +303,11 @@ OUTPUT
 2.0
 '''
 ##############################################################################
-
+def average_list(array):
+    total = 0
+    for value in array:
+        total += value
+    return total / len(array)
 ##############################################################################
 '''
 Now that the functions have been created, use them all in a main program that will:
@@ -282,17 +316,12 @@ Now that the functions have been created, use them all in a main program that wi
 3.) Print the average of all 10,000 random numbers. (Make sure it's a float) (2 lines of code)
 '''
 ##############################################################################
-
-
-
-
-
-
-
-
-
-
-
+tenThousand = create_list(10000)
+for i in range(1, 7):
+    runningTotal = count_list(tenThousand, i)
+    print(f"There are {runningTotal} amount of {i}s")
+mean = float(average_list(tenThousand))
+print(f"The average number in the list is {mean}")
 ##############################################################################
 '''
 11.) BB8 DRAWING PROGRAM (10pts)
@@ -316,7 +345,13 @@ arcade.open_window(600, 600, "BB8")
 
 # Function to draw BB8 robots
 def draw_BB8(x,y, radius):
-  
+    arcade.draw_rectangle_filled(x - (0.33 * radius), y + (1.66 * radius), radius * 0.1, radius * 0.5, arcade.color.BLACK, 0)
+    arcade.draw_rectangle_filled(x, y + (1.25 * radius), radius * 1.25, radius * 0.66, arcade.color.WHITE, 0)
+    arcade.draw_circle_filled(x, y, radius, arcade.color.WHITE, 0, 64)
+    arcade.draw_circle_filled(x, y, radius * 0.7, arcade.color.LIGHT_GRAY, 0, 64)
+    arcade.draw_rectangle_filled(x, y, 1.25 * radius, radius * 0.2, arcade.color.GRAY, 0)
+    arcade.draw_circle_outline(x, y, (radius * 0.75), arcade.color.ORANGE, 12 * (radius / 50), 0, 64)
+    arcade.draw_circle_filled(x, y + (1.25 * radius), radius * 0.2, arcade.color.BLACK, 0, 64)
 
 # The main function where we set background color, start and finish rendering and run.
 def main():
